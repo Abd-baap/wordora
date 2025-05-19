@@ -52,7 +52,7 @@ const texting=(item) => {
   settext(item.text.split(" "))
 }
 const fetchdata=async() => {
-  let a=await fetch("http://localhost:3000/api/get")
+  let a=await fetch("https://wordora.vercel.app/api/get")
   let b=await a.json()
 
   if(b.body.length>0){
@@ -84,7 +84,7 @@ const submit=()=>{
             text:form.title
         });
 
-        fetch("http://localhost:3000/api", {
+        fetch("https://wordora.vercel.app/api", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: raw
