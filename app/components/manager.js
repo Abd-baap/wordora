@@ -149,7 +149,7 @@ bo' id="delay" value={delay}  onChange={(e)=>setDelay((e.target.value))} />
         
       </div>}
       </div>    </div>
-      <div className="w-[100%] flex  gap-4 items-center justify-center text-center  p-8 text-xl  flex-wrap">
+      <div className="w-[90%] flex  gap-4 items-center justify-center text-center  p-8 text-xl  flex-wrap">
       {text.map((item, index) => {
 const start = highlightIndex * words;
   const inRange = index >= start && index < start + words;

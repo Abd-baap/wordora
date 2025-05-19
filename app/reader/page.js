@@ -1354,10 +1354,10 @@ if (text.length==385) {
       <span className="font-bold text-[40px] text-white cursor-pointer" onClick={()=>back()}>&#8678;</span>
  <div className="relative group flex flex-col">
       <button type='button'
-        onClick={handleSettingsToggle}
-        onTouchStart={handleSettingsToggle} className='drops  invert groupt cursor-pointer group-hover:hidden'><Image src="/settings.png" alt='SETTINGS' 
-        onClick={handleSettingsToggle}
-        onTouchStart={handleSettingsToggle} width={35} height={35} className=' drop'></Image></button>
+        onClick={()=>handleSettingsToggle()}
+        onTouchStart={()=>handleSettingsToggle()} className='drops  invert groupt cursor-pointer group-hover:hidden'><Image src="/settings.png" alt='SETTINGS' 
+        onClick={()=>handleSettingsToggle()}
+        onTouchStart={()=>handleSettingsToggle()} width={35} height={35} className=' drop'></Image></button>
 
      {issettingopen&& <div className="box rounded-xl cursor-pointer bg-[#1c1c1c] text-white absolute top-[-70px] w-[325px]  group-hover:flex-col group-hover:flex hover:flex-col right-[-48px]  hidden   p-8  gap-4">
 <span className="text-xl italic text-white">* Start Reading will enable the sleeping mod and highlights the words</span>
