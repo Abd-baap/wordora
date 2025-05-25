@@ -8,7 +8,7 @@ export default function HighlightText() {
   return (
     <div className="min-h-screen w-[100%] flex justify-center items-center flex-col">
    <SignedOut>
-    </SignIn>
+    <SignIn/>
     </SignedOut>
     <SignedIn>
     <Manager />
