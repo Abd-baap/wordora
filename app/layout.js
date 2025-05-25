@@ -1,7 +1,5 @@
 import dynamic from 'next/dynamic';
-import { ToastContainer } from 'react-toastify';
-import Script from 'next/script';  // Import for async scripts
-import 'react-toastify/dist/ReactToastify.css';
+import Script from 'next/script';  
 import "./globals.css";
 import Navbar from "./components/navbar";
 const Footer = dynamic(() => import('./components/footer'));
