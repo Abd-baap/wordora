@@ -1,7 +1,6 @@
-'use client';
+
 import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
-import { useState, useEffect } from 'react';
 import Manager from '../components/manager';
 
 export default function HighlightText() {
