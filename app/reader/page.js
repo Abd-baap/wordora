@@ -1,12 +1,11 @@
 "use client";
 import React, { useState, useEffect } from 'react'
-import {SignIn,SignedIn}  from '@clerk/nextjs'
+
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
-  if(SignedIn){
-    return </SignIn>}
+  
   const [text, settext] = useState([])
   const [highlightIndex, setHighlightIndex] = useState(0)
   const [lines, setLines] = useState(4)
