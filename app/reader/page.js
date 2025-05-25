@@ -1359,7 +1359,7 @@ if (text.length==385) {
         onClick={()=>handleSettingsToggle()}
         onTouchStart={()=>handleSettingsToggle()} width={35} height={35} className=' drop'></Image></button>
 
-     {issettingopen&& <div className="box rounded-xl cursor-pointer bg-[#1c1c1c] text-white absolute top-[-70px] w-[325px]  group-hover:flex-col group-hover:flex hover:flex-col right-[-48px]  flex flex-col z-index-1   p-8  gap-4">
+     {issettingopen&& <div className="box rounded-xl cursor-pointer bg-[#1c1c1c] text-white absolute top-[-70px] w-[325px]  group-hover:flex-col group-hover:flex hover:flex-col right-[-48px]  hidden   p-8  gap-4">
 <span className="text-xl italic text-white">* Start Reading will enable the sleeping mod and highlights the words</span>
       <span className="text-xl italic text-white">* Number of words are the number of words which are being on same colour</span>
       <span className="text-xl italic text-white">* Delay is the timestamp between highlighting text</span>
@@ -1388,11 +1388,8 @@ const colorIndex = Math.floor(index / (lines || 4)) % color.length;
         return (
           <span
             key={index}
-            onClick={()=>{setHighlightIndex(index)
-       handleSettingsToggle()
-  
-            }}
-            className={`px-1 transition-all cursor-pointer z-index-0  ${color[colorIndex].text}  transition-all duration-700 ease-in-out flex flex-col  rounded-xl  ${highlightIndex === index ? `${color[colorIndex].bg}  scale-110 z-index-0  shadow-sm shadow-current` : ''
+            onClick={()=>setHighlightIndex(index)}
+            className={`px-1 transition-all cursor-pointer  ${color[colorIndex].text}  transition-all duration-700 ease-in-out flex flex-col  rounded-xl  ${highlightIndex === index ? `${color[colorIndex].bg}  scale-110  shadow-sm shadow-current` : ''
               }`}
           >
             {item.text + " "} ;
