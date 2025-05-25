@@ -1,4 +1,12 @@
 import dynamic from 'next/dynamic';
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400'], // Adjust based on what you use
+  variable: '--font-poppins',
+});
+
 import Script from 'next/script';  
 import "./globals.css";
 import Navbar from "./components/navbar";
@@ -28,19 +36,17 @@ export default function RootLayout({ children }) {
     
   <meta name="robots" content="index, follow" />
   
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-</head>
+  </head>
     
-        <body className="poppins-regular">
+        <body className={`${poppins.variable} poppins-regular`}>
+  
           <Navbar />
           {children}
           <Footer />
         </body>
         
 <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NQJ9X9ZQTQ"></Script>
-<Script>
+<Script id="google analytics">
        {`window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
