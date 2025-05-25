@@ -111,11 +111,11 @@ const submit=()=>{
       </div>
     <div className="form w-[100%] flex flex-col gap-6 items-center justify-center text-center  p-8   ">
       <h1 className="text-2xl font-bold my-4">Enter Text:</h1>
-      <div className="title w-[80%] flex gap-2">
+      <div className="title w-[100%] sm:w-[80%] flex gap-2">
         <label htmlFor="title">Title:</label>
         <input type="text"name='title' placeholder='Enter Your Text Title' className='w-[80%] border rounded-xl p-4' id='title' value={form.title} onChange={e=>setForm({...form,[e.target.name]: e.target.value})} />
       </div>
-      <div className="text w-[80%] flex gap-2">
+      <div className="text sm:w-[80%] w-[100%] flex gap-2">
         <label htmlFor="text">Text:</label>
         <textarea name='text' placeholder='Enter Your Text' rows={5} id='text' className='w-[80%] border rounded-xl p-4' cols={60} value={form.text} onChange={e=>setForm({...form,[e.target.name]: e.target.value})}></textarea>
       </div>
@@ -127,12 +127,12 @@ const submit=()=>{
       <span className="font-bold text-[40px] text-white cursor-pointer" onClick={()=>settext([])}>&#8678;</span>
  <div className="relative group flex flex-col">
       <button type='button'
-        onClick={handleSettingsToggle}
-        onTouchStart={handleSettingsToggle} className='drops  invert groupt cursor-pointer group-hover:hidden'><Image src="/settings.png" alt='SETTINGS' 
-        onClick={handleSettingsToggle}
-        onTouchStart={handleSettingsToggle} width={35} height={35} className=' drop'></Image></button>
+        onClick={()=>handleSettingsToggle()}
+        onTouchStart={()=>handleSettingsToggle()} className='drops  invert groupt cursor-pointer group-hover:hidden'><Image src="/settings.png" alt='SETTINGS' 
+        onClick={()=>handleSettingsToggle()}
+        onTouchStart={()=>handleSettingsToggle()} width={35} height={35} className=' drop'></Image></button>
 
-     {issettingopen&& <div className="box rounded-xl cursor-pointer bg-[#1c1c1c] text-white absolute top-[-70px] w-[325px]  group-hover:flex-col group-hover:flex hover:flex-col right-[-48px]  hidden   p-8  gap-4">
+     {issettingopen&& <div className="box rounded-xl z-index-1 cursor-pointer bg-[#1c1c1c] text-white absolute top-[-70px] w-[325px]  group-hover:flex-col group-hover:flex hover:flex-col right-[-48px]  flex flex-col   p-8  gap-4">
       <span className="text-xl italic text-white">* Start Reading will enable the sleeping mod and highlights the words</span>
       <span className="text-xl italic text-white">* Number of words are the number of words which are being on same colour</span>
       <span className="text-xl italic text-white">* Delay is the timestamp between highlighting text</span>
@@ -158,9 +158,10 @@ const colorIndex = Math.floor(index / (words || 4)) % color.length;
 
         return (
           <span
+
             key={index}
             onClick={()=>setHighlightIndex(index)}
-            className={`px-1 transition-all cursor-pointer  ${color[colorIndex].text}  transition-all duration-700 ease-in-out flex flex-col  rounded-xl  ${inRange ? `${color[colorIndex].bg}  scale-110  shadow-sm shadow-current` : ''
+            className={`px-1 transition-all cursor-pointer z-index-0  ${color[colorIndex].text}  transition-all duration-700 ease-in-out flex flex-col  rounded-xl  ${inRange ? `${color[colorIndex].bg}  scale-110  shadow-sm shadow-current  z-index-0` : ''
               }`}
           >
             {item + " "}&nbsp; 
