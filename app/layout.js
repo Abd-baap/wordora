@@ -34,7 +34,6 @@ export default function RootLayout({ children }) {
 </head>
     
         <body className="poppins-regular">
-          <ToastContainer draggablePercent={60} toastStyle={{ backgroundColor: "cadetblue", color: "white" }} />
           <Navbar />
           {children}
           <Footer />

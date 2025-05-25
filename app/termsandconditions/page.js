@@ -5,7 +5,7 @@ export default function TermsPage() {
         <h1 className="text-4xl font-bold mb-6 border-b-2 border-cyan-700 pb-2">Terms and Conditions</h1>
 
         <p className="mb-6 text-lg">
-          Welcome to Wordora! These Terms and Conditions ("Terms") govern your use of our platform and services. By accessing or using Wordora, you agree to be bound by these Terms.
+          Welcome to Wordora! These Terms and Conditions (Terms) govern your use of our platform and services. By accessing or using Wordora, you agree to be bound by these Terms.
         </p>
 
         <section className="mb-8">
