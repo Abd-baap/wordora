@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-import { Analytics } from '@vercel/analytics/react';
 import { ToastContainer } from 'react-toastify';
 import Script from 'next/script';  // Import for async scripts
 import 'react-toastify/dist/ReactToastify.css';
@@ -25,7 +24,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
     
-        <Analytics />
         <head>
     
   
