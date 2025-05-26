@@ -1,19 +1,19 @@
+'use client';
 
-import { auth } from '@clerk/nextjs/server';
-import { redirect } from 'next/navigation';
-import Manager from '../components/manager';
+import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
 
-export default function HighlightText() {
-const { userId } = auth();
+import Manager from '../components/manager'; // Replace with your actual component
 
-  if (!userId) {
-    redirect('/sign-in'); // or a custom URL
-  }
+export default function OtherPage() {
   return (
-    <div className="min-h-screen w-[100%] flex justify-center items-center flex-col">
-   
-    <Manager />
-    
-  </div>
-    );
+    <>
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+
+      <SignedIn>
+        <Manager />
+      </SignedIn>
+    </>
+  );
 }
