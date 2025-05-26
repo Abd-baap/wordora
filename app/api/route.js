@@ -11,8 +11,7 @@ export async function POST(request) {
     await collection.insertOne({
       title:body.title,
       text:body.text,
-      data:"success",
-      added:"successfully"
+      user:body.user
     });
     console.log("data added successfully");
     return Response.json({ success: true, message: "Data added successfully" });
