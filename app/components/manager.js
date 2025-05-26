@@ -2,8 +2,9 @@
 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-
+import { useUser } from "@clerk/nextjs";
 const Manager = (props) => {
+ const User=useUser()
  const [text, settext] = useState([])
 const [form, setForm] = useState({
   title:"",
@@ -81,7 +82,8 @@ const submit=()=>{
   setArray([...array,form])
    const raw = JSON.stringify({
             title:form.title,
-            text:form.title
+            text:form.title,
+    user:User?.user?.id
         });
 
         fetch("https://wordora.vercel.app/api", {
