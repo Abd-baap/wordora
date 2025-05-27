@@ -21,12 +21,17 @@ Wordora
        <DropdownMenu>
        <DropdownMenuTrigger> <Image src="/index.png" width="40" height="40" alt='dropdown'></Image></DropdownMenuTrigger>
        <DropdownMenuContent>
+  
+        <DropdownMenuItem>
+          <Link href="/">Home</Link>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator></DropdownMenuSeparator>
         <DropdownMenuItem>
           <Link href="/reader">Read</Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator></DropdownMenuSeparator>
         <DropdownMenuItem>
-          <Link href="/other">Manage</Link>
+          <Link rel="nofollow" href="/other">Manage</Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator></DropdownMenuSeparator>
         <DropdownMenuItem>
@@ -36,7 +41,6 @@ Wordora
         <DropdownMenuItem>
           <Link href="/support">Support</Link>
         </DropdownMenuItem>
-        <DropdownMenuSeparator></DropdownMenuSeparator>
        </DropdownMenuContent>
         </DropdownMenu>
       </div>
