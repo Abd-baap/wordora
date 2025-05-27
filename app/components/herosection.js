@@ -12,7 +12,7 @@ const Herosection = () => {
     <div className="text-3xl font-bold flex justify-center  gap-2 items-center text-center">Reader that,keeps you awake.
     </div>    </div>
     <h2 className=" try  text-xl w-[80%]">Explore, learn, and stay focused with ever-shifting text and vibrant highlights.</h2>
-   <Link href='/manager' className='md:w-[30%] w-[50%]'> <button className='xl:px-8 xl:h-10  p-1 px-3 h-10 text-lg bg-black text-center text-white rounded-xl' >Get Started!</button>
+   <Link href='/reader'  className='md:w-[30%] w-[50%]'> <button className='xl:px-8 xl:h-10  p-1 px-3 h-10 text-lg bg-black text-center text-white rounded-xl' >Get Started!</button>
    </Link>
       </div>
       <div className="image h-[80%]">                                           
