@@ -9,10 +9,10 @@ export default function Footer() {
           <div className="flex contacts flex-col justify-center items-center">
             <h1 className="font-bold">Contacts</h1>
             <span>
-              <Link href="https://www.youtube.com/@DesiEdilances">Youtube</Link>
+              <Link rel="nofollow" href="https://www.youtube.com/@DesiEdilances">Youtube</Link>
             </span>
             <span>
-              <Link href="https://www.instagram.com/desi_edilances?igsh=eG93azQ0ZH1bTcy">Instagram</Link>
+              <Link rel="nofollow" href="https://www.instagram.com/desi_edilances?igsh=eG93azQ0ZH1bTcy">Instagram</Link>
             </span>
             <span>Gmail id: abhigya.abd@gmail.com</span>
           </div>
@@ -21,11 +21,18 @@ export default function Footer() {
             <span>
               <Link href="/">Home</Link>
             </span>
+        
             <span>
-              <Link href="/About">About Us</Link>
+              <Link href="/reader">Start Reading</Link>
             </span>
             <span>
-              <Link href="/Support">Support Us</Link>
+              <Link rel="nofollow" href="/other">Manage</Link>
+            </span>
+            <span>
+              <Link href="/about">About Us</Link>
+            </span>
+            <span>
+              <Link href="/support">Support Us</Link>
             </span>
           </div>
         </div>
